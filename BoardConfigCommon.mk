@@ -28,8 +28,11 @@ TARGET_CPU_CORTEX_A53 := true
 
 TARGET_BOOTLOADER_BOARD_NAME := mt6795
 
+# Display
+BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
+
 # Common properties
-TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Kernel
 TARGET_USES_64_BIT_BINDER := true
@@ -49,7 +52,7 @@ BOARD_RIL_CLASS := ../../../device/mediatek/mt6795-common/ril
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += $(COMMON_PATH)/cmhw
+BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
 
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
